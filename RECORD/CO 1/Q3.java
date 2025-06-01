@@ -28,12 +28,4 @@ Enter real and imaginary part:
 3 12
 Sum: 23 + i13
 
-=== Code Execution Successful ===
 
-
-Algorithm: Complex Number Addition
-Step 1: Define class Complexadd with variables int real, imag.
-Step 2: In constructor, read real and imag using Scanner.
-Step 3: Create two objects: c1, c2.
-Step 4: Add c1.real + c2.real and c1.imag + c2.imag.
-Step 5: Display the result as a complex number.
