@@ -56,13 +56,4 @@ Sum of matrix :
 3 0 
 3 3 
 
-=== Code Execution Successful ===
 
-Algorithm: Matrix Addition
-Step 1: Declare int row, col, i, j.
-Step 2: Read number of rows and columns (row, col).
-Step 3: Declare matrices a[row][col], b[row][col], and sum[row][col].
-Step 4: Read elements for matrix a.
-Step 5: Read elements for matrix b.
-Step 6: Add corresponding elements and store in sum.
-Step 7: Display the sum matrix.
