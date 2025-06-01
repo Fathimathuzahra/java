@@ -60,15 +60,4 @@ Price : 40000
 Processor : 4 intel
 Ram : 8gb crucial
 
-=== Code Execution Successful ===
 
-
-Algorithm: CPU with Processor and RAM Details
-Step 1: Define class cpu with variable int price.
-Step 2: Create inner class Processor with int cores, String manufacturer.
-Step 3: Create static inner class Ram with String memory, String manufacturer.
-Step 4: Use constructors to initialize all variables.
-Step 5: Create object c of class cpu and initialize price.
-Step 6: Create Processor object using c.new Processor(...).
-Step 7: Create Ram object directly as it's a static inner class.
-Step 8: Call display() method for each to show their details.
