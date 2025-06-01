@@ -55,15 +55,3 @@ Enter the matrix elements:
 0 2
 matrix is symmetric
 
-=== Code Execution Successful ===
-
-
-
-Algorithm: Check Symmetric Matrix
-Step 1: Read matrix size r.
-Step 2: Declare matrix a[r][r].
-Step 3: Read all elements into matrix a.
-Step 4: Set flag sym = true.
-Step 5: For all i, j, check if a[i][j] == a[j][i].
-Step 6: If any mismatch, set sym = false.
-Step 7: If sym is true, print "matrix is symmetric", else print "not symmetric".
