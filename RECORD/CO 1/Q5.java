@@ -5,59 +5,82 @@ information of Processor and RAM.
 
 code:
 
+
 import java.util.Scanner;
-class cpu{
-int price;
-cpu(int p){
-this.price=p;
-}
-class Processor{
-int cores;
-String manufacturer;
 
-Processor(int c,String m){
-this.cores=c;
-this.manufacturer=m;
-}
-void display(){
+class CPU {
+    double price;
 
-System.out.println("Processor : "+this.cores+" "+this.manufacturer);
+    class Processor {
+        int cores;
+        String manufacturer;
 
-}
-}
-static class Ram{
-String memory;
-String manufacturer;
-Ram(String m,String ma){
+        Processor(int cores, String manufacturer) {
+            this.cores = cores;
+            this.manufacturer = manufacturer;
+        }
 
-this.memory=m;
-this.manufacturer=ma;
-}
-void display(){
-System.out.println("Ram : "+this.memory+" "+this.manufacturer);
+        void displayProcessorInfo() {
+            System.out.println("Processor Cores: " + cores);
+            System.out.println("Processor Manufacturer: " + manufacturer);
+        }
+    }
 
-}
-}
-void display(){
-System.out.println("Price : "+this.price);
+    static class RAM {
+        int memory;
+        String manufacturer;
+
+        RAM(int memory, String manufacturer) {
+            this.memory = memory;
+            this.manufacturer = manufacturer;
+        }
+
+        void displayRAMInfo() {
+            System.out.println("RAM Memory: " + memory + " GB");
+            System.out.println("RAM Manufacturer: " + manufacturer);
+        }
+    }
+
+    CPU(double price) {
+        this.price = price;
+    }
+    void displayCPUInfo() {
+        System.out.println("CPU Price: $" + price);
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter CPU price: ");
+        double price = scanner.nextDouble();
+        scanner.nextLine();
+
+        CPU cpu = new CPU(price);
+        cpu.displayCPUInfo();
+
+        System.out.print("Enter number of cores for the processor: ");
+        int cores = scanner.nextInt();
+        scanner.nextLine();
+
+        System.out.print("Enter processor manufacturer: ");
+        String processorManufacturer = scanner.nextLine();
+
+        CPU.Processor processor = cpu.new Processor(cores, processorManufacturer);
+        processor.displayProcessorInfo();
+
+        System.out.print("Enter RAM memory (in GB): ");
+        int memory = scanner.nextInt();
+        scanner.nextLine();
+
+        System.out.print("Enter RAM manufacturer: ");
+        String ramManufacturer = scanner.nextLine();
+
+        CPU.RAM ram = new CPU.RAM(memory, ramManufacturer);
+        ram.displayRAMInfo();
+
+    }
 }
 
-public static void main(String[] args){
-cpu c=new cpu(40000);
-cpu.Processor p=c.new Processor(4,"intel");
-cpu.Ram r=new Ram("8gb","crucial");
-c.display();
-p.display();
-r.display();
-}
-}
 
-
-
-output:
-
-Price : 40000
-Processor : 4 intel
-Ram : 8gb crucial
 
 
